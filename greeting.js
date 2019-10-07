@@ -1,3 +1,5 @@
+// import { hours } from './clock.js';
+
 const form = document.querySelector('.js-form'),
     input = form.querySelector('input'),
     greeting = document.querySelector('.js-greetings');
@@ -24,7 +26,15 @@ function askForName() {
 function paintGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
+    // if(hours >= 6 && hours < 12) {
+    //     greeting.innerText = `Good morning ${text}`;
+    // }else if(hours >= 12 && hours < 18) {
+    //     greeting.innerText = `Good afternoon ${text}`;
+    // }else if(hours >= 18 && hours <= 23) {
+    //     greeting.innerText = `Good evening ${text}`;
+    // }else {
     greeting.innerText = `Hello ${text}`;
+    // }
     
 }
 

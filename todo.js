@@ -10,10 +10,24 @@ function saveTodos() {
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
 
+function deleteTodo(event) {
+    let clickedBtn = event.target.parentNode;
+    let btnId = parseInt(clickedBtn.id);
+    console.log(btnId);
+    clickedBtn.remove();
+    toDos.forEach((cur, i) => {
+        if(cur.id === btnId) {
+            toDos.splice(i,1);
+        }
+    });
+    saveTodos();
+}
+
 function paintTodo(text) {
     const li = document.createElement('li');
     const delBtn = document.createElement('button');
     delBtn.innerText = "❌";
+    delBtn.addEventListener('click', deleteTodo);
     const span = document.createElement('span');
     const newId = toDos.length + 1;
     span.innerText = text;
