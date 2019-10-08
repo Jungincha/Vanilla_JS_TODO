@@ -34,4 +34,5 @@ body.prepend(image);
 ```js
 const num = Math.floor(Math.random() * IMG_NUM);
 ```
-
+#### Sample image
+![alt text]()
