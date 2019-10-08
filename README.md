@@ -35,4 +35,4 @@ body.prepend(image);
 const num = Math.floor(Math.random() * IMG_NUM);
 ```
 #### Sample image
-![alt text]()
+![alt text](https://user-images.githubusercontent.com/47588349/66368132-0a7ed900-e9d2-11e9-9cce-dacb1e979ab6.png)
